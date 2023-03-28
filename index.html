@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>El pollo loco</title>
+    <link
+      rel="icon"
+      type="images/x-icon"
+      href="img/9_intro_outro_screens/start/startscreen_1.png"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/media.css" />
+    <script src="models/world.class.js"></script>
+    <script src="models/drawable-object.class.js"></script>
+    <script src="models/movable-object.class.js"></script>
+    <script src="models/character.class.js"></script>
+    <script src="models/chicken.class.js"></script>
+    <script src="models/small-chicken.class.js"></script>
+    <script src="models/cloud.class.js"></script>
+    <script src="models/coin.class.js"></script>
+    <script src="models/status-bar-health.class.js"></script>
+    <script src="models/status-bar-bottle.class.js"></script>
+    <script src="models/status-bar-coin.class.js"></script>
+    <script src="models/status-bar-health-endboss.class.js"></script>
+    <script src="models/background-object.class.js"></script>
+    <script src="models/bottlesalsa.class.js"></script>
+    <script src="models/endboss.class.js"></script>
+    <script src="models/keyboard.class.js"></script>
+    <script src="models/level.class.js"></script>
+    <script src="models/throwable-object.class.js"></script>
+    <script src="levels/level1.js"></script>
+    <script src="js/game.js"></script>
+  </head>
+
+  <body>
+    <h1>El pollo loco</h1>
+    <div id="start-screen" class="card__screen">
+      <div class="card__screen--phoneWarning">
+        <h2>Please turn around your mobile phone</h2>
+      </div>
+      <img
+        class="card__screen--img"
+        src="img/9_intro_outro_screens/start/startscreen_1.png"
+      />
+      <img
+        class="card__screen--iconPlay"
+        onclick="startGame()"
+        src="icons/playButton.png"
+      />
+      <img
+        class="card__screen--iconControll"
+        src="icons/controllerIcon.png"
+        onclick="showControllMenu()"
+      />
+      <div class="card__gameControlls d-none" id="cardControlls">
+        <img
+          src="icons/arrowBack.png"
+          class="card__gameControlls--arrowBack"
+          onclick="closeControllMenu()"
+          id="arrowBackGameControlls"
+        />
+        <h2>Game Controls</h2>
+        <table>
+          <tr>
+            <td>
+              <img
+                class="card__gameControlls-keyboard"
+                src="icons/arrowLeft.png"
+              />
+            </td>
+            <td>
+              <p class="card__gameControlls-text">Pepe Move Left</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                class="card__gameControlls-keyboard"
+                src="icons/arrowRight.png"
+              />
+            </td>
+            <td>
+              <p class="card__gameControlls-text">Pepe Move Right</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                class="card__gameControlls-keyboard"
+                src="icons/spaceButton.png"
+              />
+            </td>
+            <td>
+              <p class="card__gameControlls-text">Pepe Jump</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                class="card__gameControlls-keyboard"
+                src="icons/letterC.png"
+              />
+            </td>
+            <td>
+              <p class="card__gameControlls-text">Pepe Throw Bottle</p>
+            </td>
+          </tr>
+        </table>
+        <div class="card__gameControllsInfo">
+          <img src="icons/infoIcon.png" />
+          <span class="infoText">
+            - If you stand behind the boss, the game is lost.
+            <br />
+            - With the bottles you can only kill the final boss.
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card__screenCanvas" id="fullscreean">
+      <canvas id="canvas" width="760" height="480" style="display: none">
+      </canvas>
+      <img
+        src="icons/audioOnIcon.png"
+        class="audio__icon"
+        id="showIconAudio"
+        style="display: none"
+        onclick="world.pauseAndPlayAudios()"
+      />
+      <img
+        style="display: none"
+        onclick="showFullScreen()"
+        id="showIconFullscreen"
+        src="icons/enterFullscreenIcon.png"
+        class="fullScreen__icon"
+      />
+      <div
+        class="container__mobilebtn-left"
+        style="display: none"
+        id="mobile-btnLeft"
+      >
+        <img src="icons/arrowLeftMobile.png" id="btnMobileLeft" />
+        <img src="icons/arrowRightMobile.png" id="btnMobileRight" />
+      </div>
+      <div
+        class="container__mobilebtn-right"
+        style="display: none"
+        id="mobile-btnRight"
+      >
+        <img src="icons/arrowUpMobile.png" id="btnMobileJump" />
+        <img src="icons/arrowThrowMobile.png" id="btnMobileThrow" />
+      </div>
+      <div class="container__lostScreen" id="youLost" style="display: none">
+        <img src="img/9_intro_outro_screens/game_over/you lost.png" />
+        <button
+          onclick="startGame()"
+          id="btnRestartGameOverScreen"
+          class="Screen--btn"
+        >
+          Restart Game
+        </button>
+      </div>
+      <div class="container__winScreen" id="youWin" style="display: none">
+        <img src="img/9_intro_outro_screens/game_over/game over.png" />
+        <button
+          onclick="startGame()"
+          id="btnRestartGameOverScreen"
+          class="Screen--btn"
+        >
+          Restart Game
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

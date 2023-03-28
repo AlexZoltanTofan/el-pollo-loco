@@ -1,0 +1,287 @@
+body {
+  font-family: 'zabars', Arial, Helvetica, sans-serif;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  background-image: url('../img/desert-3598089_1280.jpg');
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  margin: 0;
+}
+
+h1 {
+  font-size: 64px;
+  margin-top: 0;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.card__screen {
+  position: relative;
+  display: block;
+}
+
+.card__screen--phoneWarning {
+  display: none;
+}
+
+.card__screen--phoneWarning h2 {
+  font-size: 22px;
+  letter-spacing: 2px;
+}
+
+.card__screen--img {
+  width: 760px;
+  height: 480px;
+  border-radius: 20px;
+}
+
+.card__screen--iconPlay {
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  right: 120px;
+  top: 20px;
+}
+
+.card__screen--iconPlay:hover {
+  cursor: pointer;
+  transition: 225ms ease-in-out;
+  transform: scale(1.2);
+}
+
+.card__screen--iconControll {
+  width: 40px;
+  height: 35px;
+  position: absolute;
+  right: 50px;
+  top: 17px;
+}
+
+.card__screen--iconControll:hover {
+  cursor: pointer;
+  transition: 225ms ease-in-out;
+  transform: scale(1.2);
+}
+
+.card__gameControlls {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  border: 2px solid black;
+  background-color: #ff9600eb;
+  background-image: linear-gradient(90deg, #ffd900e0, #ff9600eb);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card__gameControlls h2 {
+  font-size: 31px;
+  letter-spacing: 3px;
+}
+
+.card__gameControlls--arrowBack {
+  position: absolute;
+  left: 35px;
+  top: 30px;
+  width: 40px;
+  height: 40px;
+}
+
+.card__gameControlls--arrowBack:hover {
+  cursor: pointer;
+  transition: 225ms ease-in-out;
+  transform: scale(1.2);
+}
+
+.card__gameControlls table tr {
+  display: flex;
+  align-items: center;
+}
+
+.card__gameControlls-text {
+  padding-left: 30px;
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+
+.card__gameControlls-keyboard {
+  width: 30px;
+  height: 30px;
+}
+
+.card__gameControllsInfo {
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.card__gameControllsInfo img {
+  width: 40px;
+}
+
+.card__gameControllsInfo span {
+  padding-left: 10;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+.card__screenCanvas {
+  position: relative;
+}
+
+canvas {
+  position: relative;
+  background-color: black;
+  border-radius: 20px;
+  display: block;
+  box-shadow: 0px 0 10px 10px rgb(0 0 0 / 35%);
+}
+
+.audio__icon {
+  position: absolute;
+  cursor: pointer;
+  right: 100px;
+  top: 17px;
+  width: 40px;
+  height: 40px;
+}
+
+.audio__icon:hover {
+  cursor: pointer;
+  transition: 225ms ease-in-out;
+  transform: scale(1.2);
+}
+
+.fullScreen__icon {
+  position: absolute;
+  cursor: pointer;
+  right: 50px;
+  top: 22px;
+  width: 30px;
+  height: 30px;
+}
+
+.fullScreen__icon:hover {
+  cursor: pointer;
+  transition: 225ms ease-in-out;
+  transform: scale(1.2);
+}
+
+.container__mobilebtn-left {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+
+.container__mobilebtn-left img {
+  width: 35px;
+  height: 35px;
+  padding: 0 20px;
+  display: none;
+}
+
+.container__mobilebtn-right {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.container__mobilebtn-right img {
+  width: 35px;
+  height: 35px;
+  padding: 0 20px;
+  display: none;
+}
+
+.container__lostScreen {
+  background-image: url('../img/desert-3598089_1280.jpg');
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  animation: scale-in-center 225ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 100ms
+    both;
+}
+
+.container__lostScreen img {
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  animation: scale-in-center 225ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 100ms
+    both;
+}
+
+.Screen--btn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+  background-color: #ffcc00;
+  box-sizing: border-box;
+  border: 1px solid black;
+  cursor: pointer;
+  height: 50px;
+  width: 240px;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: 'zabras', Arial, Helvetica, sans-serif;
+  animation: scale-in-center 225ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 100ms
+    both;
+}
+
+.container__winScreen {
+  background-image: url('../img/desert-3598089_1280.jpg');
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  animation: scale-in-center 225ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 100ms
+    both;
+}
+.container__winScreen img {
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  animation: scale-in-center 225ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 100ms;
+}
+
+@keyframes scale-in-center {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.d-none {
+  display: none !important;
+}

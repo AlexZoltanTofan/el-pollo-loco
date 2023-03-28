@@ -1,0 +1,17 @@
+{
+  "liveServer.settings.port": 5501,
+  "editor.autoClosingOvertype": "auto",
+  "editor.autoClosingBrackets": "languageDefined",
+  "editor.autoClosingQuotes": "always",
+  "editor.autoSurround": "languageDefined",
+  "editor.autoClosingDelete": "always",
+  "editor.autoIndent": "full",
+  "workbench.editor.untitled.labelFormat": "content",
+  "html.format.preserveNewLines": true,
+  "javascript.format.enable": true,
+  "editor.matchBrackets": "always",
+  "prettier.arrowParens": "always",
+  "prettier.bracketSpacing": true,
+  "prettier.embeddedLanguageFormatting": "auto",
+  "liveServer.settings.CustomBrowser": "microsoft-edge"
+}

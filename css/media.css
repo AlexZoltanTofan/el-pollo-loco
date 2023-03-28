@@ -1,0 +1,118 @@
+/* Smartphones */
+@media only screen and (max-width: 720px) {
+  .card__screen--img {
+    width: 100%;
+    height: auto;
+  }
+  canvas {
+    width: 100%;
+
+    height: auto;
+  }
+  h1 {
+    position: absolute;
+    top: 97px;
+    font-size: 44px;
+    margin-top: 8px;
+  }
+
+  .card__screen--iconControll {
+    width: 20px;
+    height: 20px;
+    right: 30px;
+  }
+
+  .card__screen--iconPlay {
+    width: 20px;
+    height: 20px;
+    right: 70px;
+  }
+
+  .audio__icon {
+    top: 10px;
+    width: 25px;
+    height: 25px;
+  }
+
+  .fullScreen__icon {
+    top: 12px;
+    width: 22px;
+    height: 22px;
+    right: 50px;
+  }
+
+  .container__mobilebtn-left img {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+  }
+  .container__mobilebtn-right img {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+  }
+}
+
+/* Smartphones */
+@media only screen and (max-height: 480px) {
+  .card__screen--img {
+    height: 100vh;
+    width: auto;
+  }
+
+  canvas {
+    width: auto;
+    height: 100vh;
+  }
+  h1 {
+    position: absolute;
+    top: 0;
+    font-size: 44px;
+    margin-top: 8px;
+  }
+  .card__screen--iconControll {
+    top: 18px;
+  }
+  .card__screen--iconPlay {
+    top: 20px;
+  }
+
+  .card__gameControlls {
+    top: 2px;
+    height: 98%;
+  }
+
+  .audio__icon {
+    right: 100px;
+  }
+  .mobile-btnRight {
+    display: block;
+  }
+  .container__mobilebtn-left img {
+    display: inline-block;
+  }
+  .container__mobilebtn-right img {
+    display: inline-block;
+  }
+  .card__gameControlls-text {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) and (orientation: portrait) {
+  .card__screen--phoneWarning {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: #ff9600eb;
+    background-image: linear-gradient(90deg, #ffcc00, #ff9600eb);
+
+    opacity: 0.9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background-size: cover;
+  }
+}
